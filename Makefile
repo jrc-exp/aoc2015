@@ -32,7 +32,7 @@ stub_day:
 	# just use VScode so no need to open vim
 	# @gnome-terminal -x bash -ic "vi $(DAY_FILE); bash" &
 	@if grep -q day$(DAY) setup.cfg; then echo exists; \
-		else echo "  run_day$(DAY) = aoc.y$(YEAR).day$(DAY):main" >> setup.cfg && \
+		else echo "  aoc$(YEAR)_day$(DAY) = aoc.y$(YEAR).day$(DAY):main" >> setup.cfg && \
 		pip install --no-deps -e .; fi
 	@run_day$(DAY)
 

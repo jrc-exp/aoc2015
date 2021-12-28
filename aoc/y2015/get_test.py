@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 if __name__ == "__main__":
     day = sys.argv[1]
-    url = f"https://adventofcode.com/2021/day/{day}"
+    url = f"https://adventofcode.com/2015/day/{day}"
     page = requests.get(url)
     soup = BeautifulSoup(page.text, "html.parser")
     test_text = ""
